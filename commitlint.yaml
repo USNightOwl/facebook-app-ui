@@ -1,0 +1,2 @@
+# Inherit configuration of a package
+include: package:commitlint_cli/commitlint.yaml
