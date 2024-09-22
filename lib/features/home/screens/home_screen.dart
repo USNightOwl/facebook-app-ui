@@ -1,4 +1,5 @@
 import 'package:facebook_app_ui/features/home/widgets/home_app_bar.dart';
+import 'package:facebook_app_ui/features/news-feed/screens/new_feed_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -26,6 +27,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    late final list = <Widget>[
+      NewsFeedScreen(parentScrollController: scrollController),
+    ];
+
     return Scaffold(
       body: NestedScrollView(
         controller: scrollController,
@@ -365,13 +370,17 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                     ),
+                    const Divider(
+                      color: Colors.black12,
+                      height: 0,
+                    ),
                   ],
                 ),
               ),
             )
           ];
         },
-        body: Container(),
+        body: list[index],
       ),
     );
   }
