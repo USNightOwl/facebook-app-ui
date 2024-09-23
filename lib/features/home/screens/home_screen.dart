@@ -1,4 +1,5 @@
 import 'package:facebook_app_ui/features/home/widgets/home_app_bar.dart';
+import 'package:facebook_app_ui/features/menu/screens/menu_screen.dart';
 import 'package:facebook_app_ui/features/news-feed/screens/new_feed_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +11,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  static const String routeName = '/home';
   int index = 0;
   double toolBarHeight = 60;
   ScrollController scrollController = ScrollController();
@@ -29,6 +31,11 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     late final list = <Widget>[
       NewsFeedScreen(parentScrollController: scrollController),
+      NewsFeedScreen(parentScrollController: scrollController),
+      NewsFeedScreen(parentScrollController: scrollController),
+      NewsFeedScreen(parentScrollController: scrollController),
+      NewsFeedScreen(parentScrollController: scrollController),
+      const MenuScreen()
     ];
 
     return Scaffold(
