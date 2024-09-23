@@ -2,6 +2,7 @@ import 'package:facebook_app_ui/features/dating/screens/dating_screen.dart';
 import 'package:facebook_app_ui/features/home/widgets/home_app_bar.dart';
 import 'package:facebook_app_ui/features/menu/screens/menu_screen.dart';
 import 'package:facebook_app_ui/features/news-feed/screens/new_feed_screen.dart';
+import 'package:facebook_app_ui/features/notifications/screens/notifications_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -37,7 +38,9 @@ class _HomeScreenState extends State<HomeScreen> {
       const DatingScreen(
         key: Key('dating-screen'),
       ),
-      NewsFeedScreen(parentScrollController: scrollController),
+      const NotificationsScreen(
+        key: Key('notifications-screen'),
+      ),
       const MenuScreen()
     ];
 
