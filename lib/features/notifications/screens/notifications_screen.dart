@@ -145,6 +145,12 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    scrollController.addListener(() {
+      headerScrollController.jumpTo(headerScrollController.offset +
+          scrollController.offset -
+          NotificationsScreen.offset);
+      NotificationsScreen.offset = scrollController.offset;
+    });
     return Scaffold(
       body: NestedScrollView(
         controller: headerScrollController,

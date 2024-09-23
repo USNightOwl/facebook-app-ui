@@ -1,5 +1,6 @@
 import 'package:facebook_app_ui/features/dating/screens/dating_screen.dart';
 import 'package:facebook_app_ui/features/home/widgets/home_app_bar.dart';
+import 'package:facebook_app_ui/features/market_place/screens/market_place_screen.dart';
 import 'package:facebook_app_ui/features/menu/screens/menu_screen.dart';
 import 'package:facebook_app_ui/features/news-feed/screens/new_feed_screen.dart';
 import 'package:facebook_app_ui/features/notifications/screens/notifications_screen.dart';
@@ -34,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
     late final list = <Widget>[
       NewsFeedScreen(parentScrollController: scrollController),
       NewsFeedScreen(parentScrollController: scrollController),
-      NewsFeedScreen(parentScrollController: scrollController),
+      const MarketPlaceScreen(),
       const DatingScreen(
         key: Key('dating-screen'),
       ),
