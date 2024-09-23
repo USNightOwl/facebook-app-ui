@@ -454,64 +454,64 @@ class _MarketPlaceScreenState extends State<MarketPlaceScreen> {
                         ),
                       ),
                       TableCell(
-                          child: Padding(
-                              padding: const EdgeInsets.only(bottom: 10),
-                              child: InkWell(
-                                onTap: () {},
-                                child: Column(
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 10),
+                          child: InkWell(
+                            onTap: () {},
+                            child: Column(
+                              children: [
+                                Image.network(
+                                  products[i + 1].images[0],
+                                  fit: BoxFit.cover,
+                                  width:
+                                      (MediaQuery.of(context).size.width - 5) /
+                                          2,
+                                  height:
+                                      (MediaQuery.of(context).size.width - 5) /
+                                          2,
+                                ),
+                                const SizedBox(
+                                  height: 5,
+                                ),
+                                Row(
                                   children: [
-                                    Image.network(
-                                      products[i + 1].images[0],
-                                      fit: BoxFit.cover,
-                                      width:
-                                          (MediaQuery.of(context).size.width -
-                                                  5) /
-                                              2,
-                                      height:
-                                          (MediaQuery.of(context).size.width -
-                                                  5) /
-                                              2,
+                                    const SizedBox(
+                                      width: 5,
+                                    ),
+                                    Text(
+                                      '${products[i + 1].price} đ',
+                                      style: const TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500),
                                     ),
                                     const SizedBox(
-                                      height: 5,
+                                      width: 2,
                                     ),
-                                    Row(
-                                      children: [
-                                        const SizedBox(
-                                          width: 5,
+                                    const Icon(
+                                      Icons.circle,
+                                      size: 2,
+                                    ),
+                                    const SizedBox(
+                                      width: 2,
+                                    ),
+                                    Expanded(
+                                      child: Text(
+                                        products[i + 1].name,
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: const TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w600,
                                         ),
-                                        Text(
-                                          '${products[i + 1].price} đ',
-                                          style: const TextStyle(
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.w500),
-                                        ),
-                                        const SizedBox(
-                                          width: 2,
-                                        ),
-                                        const Icon(
-                                          Icons.circle,
-                                          size: 2,
-                                        ),
-                                        const SizedBox(
-                                          width: 2,
-                                        ),
-                                        Expanded(
-                                          child: Text(
-                                            products[i + 1].name,
-                                            maxLines: 1,
-                                            overflow: TextOverflow.ellipsis,
-                                            style: const TextStyle(
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    )
+                                      ),
+                                    ),
                                   ],
-                                ),
-                              )))
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
                     ])
                 ],
               ),

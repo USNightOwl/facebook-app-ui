@@ -7,6 +7,7 @@ import 'package:facebook_app_ui/features/notifications/screens/notifications_scr
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
+  static const String routeName = '/home';
   const HomeScreen({super.key});
 
   @override
@@ -14,7 +15,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  static const String routeName = '/home';
   int index = 0;
   double toolBarHeight = 60;
   ScrollController scrollController = ScrollController();

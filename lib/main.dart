@@ -1,6 +1,7 @@
 import 'package:facebook_app_ui/constants/global_variables.dart';
 import 'package:facebook_app_ui/features/home/screens/home_screen.dart';
 import 'package:facebook_app_ui/providers/user_provider.dart';
+import 'package:facebook_app_ui/router.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
           iconTheme: IconThemeData(color: GlobalVariables.iconColor),
         ),
       ),
+      onGenerateRoute: (settings) => generateRoute(settings),
       home: const HomeScreen(),
     );
   }

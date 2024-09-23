@@ -42,6 +42,50 @@ class User {
     this.pageType,
     this.address,
   });
+
+  User copyWith({
+    String? name,
+    String? avatar,
+    bool? verified,
+    String? cover,
+    int? friends,
+    int? likes,
+    int? followers,
+    List<String>? hobbies,
+    List<Story>? stories,
+    List<User>? topFriends,
+    String? hometown,
+    List<SocialMedia>? socialMedias,
+    String? bio,
+    String? type,
+    List<Education>? educations,
+    bool? guard,
+    List<Post>? posts,
+    String? pageType,
+    String? address,
+  }) {
+    return User(
+      name: name ?? this.name,
+      avatar: avatar ?? this.avatar,
+      verified: verified ?? this.verified,
+      cover: cover ?? this.cover,
+      friends: friends ?? this.friends,
+      likes: likes ?? this.likes,
+      followers: followers ?? this.followers,
+      hobbies: hobbies ?? this.hobbies,
+      stories: stories ?? this.stories,
+      topFriends: topFriends ?? this.topFriends,
+      hometown: hometown ?? this.hometown,
+      socialMedias: socialMedias ?? this.socialMedias,
+      bio: bio ?? this.bio,
+      type: type ?? this.type,
+      educations: educations ?? this.educations,
+      guard: guard ?? this.guard,
+      posts: posts ?? this.posts,
+      pageType: pageType ?? this.pageType,
+      address: address ?? this.address,
+    );
+  }
 }
 
 class Education {

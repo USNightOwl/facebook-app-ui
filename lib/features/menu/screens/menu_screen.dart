@@ -1,4 +1,5 @@
 import 'package:facebook_app_ui/features/menu/widgets/shortcut.dart';
+import 'package:facebook_app_ui/features/personal/screens/personal_screen.dart';
 import 'package:facebook_app_ui/models/user.dart';
 import 'package:flutter/material.dart';
 
@@ -400,11 +401,11 @@ class _MenuScreenState extends State<MenuScreen> {
             children: [
               InkWell(
                 onTap: () {
-                  // Navigator.pushNamed(
-                  //   context,
-                  //   PersonalPageScreen.routeName,
-                  //   arguments: user,
-                  // );
+                  Navigator.pushNamed(
+                    context,
+                    PersonalScreen.routeName,
+                    arguments: user,
+                  );
                 },
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
