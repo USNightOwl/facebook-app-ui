@@ -1,3 +1,4 @@
+import 'package:facebook_app_ui/features/dating/screens/dating_screen.dart';
 import 'package:facebook_app_ui/features/home/widgets/home_app_bar.dart';
 import 'package:facebook_app_ui/features/menu/screens/menu_screen.dart';
 import 'package:facebook_app_ui/features/news-feed/screens/new_feed_screen.dart';
@@ -33,7 +34,9 @@ class _HomeScreenState extends State<HomeScreen> {
       NewsFeedScreen(parentScrollController: scrollController),
       NewsFeedScreen(parentScrollController: scrollController),
       NewsFeedScreen(parentScrollController: scrollController),
-      NewsFeedScreen(parentScrollController: scrollController),
+      const DatingScreen(
+        key: Key('dating-screen'),
+      ),
       NewsFeedScreen(parentScrollController: scrollController),
       const MenuScreen()
     ];
